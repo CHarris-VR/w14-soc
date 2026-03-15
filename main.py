@@ -1,9 +1,11 @@
 import requests
+import os
 from typing import Any
 
-NETBOX_API_URL = "PASTE_NETBOX_MOCKAROO_URL"
-QUALYS_API_URL = "PASTE_QUALYS_MOCKAROO_URL"
-CROWDSTRIKE_API_URL = "PASTE_CROWDSTRIKE_MOCKAROO_URL"
+
+NETBOX_API_URL = "https://my.api.mockaroo.com/ironclad/netbox/inventory.json"
+QUALYS_API_URL = "https://my.api.mockaroo.com/ironclad/qualys/inventory.json"
+CROWDSTRIKE_API_URL = "https://my.api.mockaroo.com/ironclad/crowdstrike/inventory.json"
 
 
 def fetch_json(url: str) -> list[dict[str, Any]]:
@@ -38,5 +40,4 @@ def main():
     preview_dataset("QUALYS", QUALYS_API_URL)
     preview_dataset("CROWDSTRIKE", CROWDSTRIKE_API_URL)
 
-if __name__ == "__main__":
-    main() 
+    # Test Successful up to this pointt.
